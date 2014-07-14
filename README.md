@@ -23,6 +23,34 @@ Usage
 <script src="./angular-notify.js"></script>
 ```
 
+Create for example a div element with attribute or a flash-messages element in the body.
+
+```
+<div flash:messages class="notifications top-right"></div>
+```
+
+Avaliable positions:
+
+| Position      | Class Name    | Description   |
+| ------------- | ------------- | ------------- |
+| Top Left | top-left | Notifications will appear fixed in the top-left corner |
+| Top Right | top-right | Notifications will appear fixed in the top-right corner |
+| Bottom Left | bottom-left | Notifications will appear fixed in the bottom-left corner |
+| Bottom Right | bottom-right | Notifications will appear fixed in the bottom-right corner |
+
+Sample "notifications" class:
+```
+/* Notification bar */
+.notifications.top-right {
+   right: 20px;
+   top: 60px;
+}
+.notifications {
+   position: fixed;
+   z-index: 9999;
+}
+```
+
 Inject "notification" to your controller or other methods.
 
 You can use it like below in order to show notifications:

@@ -1,4 +1,4 @@
-angular-notify
+angular-lightify
 ==============
 
 AngularJS factory for Bootstrap notify
@@ -25,7 +25,7 @@ Usage
 ==============
 
 ```
-<script src="./angular-notify.js"></script>
+<script src="./angular-lightify.js"></script>
 ```
 
 Create for example a div element with attribute or a nrz-flash-messages element in the body.
@@ -43,18 +43,18 @@ Avaliable positions:
 | Bottom Left | bottom-left | Notifications will appear fixed in the bottom-left corner |
 | Bottom Right | bottom-right | Notifications will appear fixed in the bottom-right corner |
 
-Inject "nrzNotification" to your controller or other methods.
+Inject "nrzLightify" to your controller or other methods.
 
 You can use it like below in order to show notifications:
 ```
-nrzNotification({
+nrzLightify({
    type: 'warning',
    text: 'A notification!'
 });
 ```
 or for flash notifications:
 ```
-nrzNotification.flash({
+nrzLightify.flash({
    type: 'warning',
    text: 'A flash notification!'
 });
@@ -71,7 +71,7 @@ All available types:
 You can give custom delay time for notification bars like below as miliseconds:
 ```
 // Disappears after 10 seconds.
-nrzNotification({
+nrzLightify({
    type: 'warning',
    text: 'A notification!'
 }, 10000);

@@ -1,0 +1,82 @@
+<html ng-app="nrzLightifyApp">
+  <head>
+    <meta charset=utf-8 />
+    <title>angular-lightify</title>
+
+    <base href="/lightify-demo/">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-notify/css/bootstrap-notify.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap-notify/js/bootstrap-notify.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/angular-lightify.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+
+  <body ng-controller="nrzLightifyCtrl as lightify">
+
+    <div nrz-lightify-messages position="top-right"></div>
+
+    <div class="container">
+      <div class="nrz-layer">
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <a href="#/page1">Page 1</a> |
+            <a href="#/page2">Page 2</a>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{heading}}</h3>
+          </div>
+
+          <div class="panel-body" ng-view></div>
+
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/ng-template" id="page1.html">
+      <div class="col-md-3"><button type="button" class="btn btn-success" ng-click="lightifyMe('success')">Success</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-success" ng-click="lightifyMe('success')"&gt;Success&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-info" ng-click="lightifyMe('info')">Info</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-info" ng-click="lightifyMe('info')"&gt;Info&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-warning" ng-click="lightifyMe('warning')">Warning</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-warning" ng-click="lightifyMe('warning')"&gt;Warning&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-danger" ng-click="lightifyMe('danger')">Danger</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-danger" ng-click="lightifyMe('danger')"&gt;Danger&lt;/button&gt;</code></pre></div>
+
+      <h4 class="page-header col-md-12">Flash Messages</h4>
+
+      <div class="col-md-3"><button type="button" class="btn btn-danger" ng-click="lightifyMeFlash('danger')">Flash Notification - Danger</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-danger" ng-click="lightifyMeFlash('danger')"&gt;Flash Notification - Danger&lt;/button&gt;</code></pre></div>
+    </script>
+
+    <script type="text/ng-template" id="page2.html">
+      <div class="col-md-3"><button type="button" class="btn btn-success" ng-click="lightifyMe('success', 5000)">Success (5 Seconds)</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-success" ng-click="lightifyMe('success', 5000)"&gt;Success (5 Seconds)&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-info" ng-click="lightifyMe('info', 10000)">Info (10 Seconds)</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-info" ng-click="lightifyMe('info', 10000)"&gt;Info (10 Seconds)&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-warning" ng-click="lightifyMe('warning', 30000)">Warning (30 Seconds)</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-warning" ng-click="lightifyMe('warning', 30000)"&gt;Warning (30 Seconds)&lt;/button&gt;</code></pre></div>
+
+      <div class="col-md-3"><button type="button" class="btn btn-danger" ng-click="lightifyMe('danger', 600000)">Danger (60 Seconds)</button></div>
+      <div class="col-md-9"><pre><code>&lt;button type="button" class="btn btn-danger" ng-click="lightifyMe('danger', 600000)"&gt;Danger (60 Seconds)&lt;/button&gt;</code></pre></div>
+    </script>
+
+  </body>
+</html>
+

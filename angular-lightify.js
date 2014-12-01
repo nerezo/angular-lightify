@@ -1,6 +1,6 @@
-  angular.module('nrzNotification', [])
+  angular.module('nrzLightify', [])
 
-  .factory('nrzNotification', ['$rootScope', '$timeout', function ($rootScope, $timeout) {
+  .factory('nrzLightify', ['$rootScope', '$timeout', function ($rootScope, $timeout) {
     var messages = [];
 
     var reset;
@@ -14,14 +14,14 @@
 
     // Trigger the the flash:message event
     var emit = function () {
-      $rootScope.$emit('flash:message', messages, nrzNotification, cleanup);
+      $rootScope.$emit('flash:message', messages, nrzLightify, cleanup);
     };
 
     // Below events trigger on $stateChangeSuccess event with uiRouter and $routeChangeSuccess event with ngRoute
     $rootScope.$on('$routeChangeSuccess', emit);
     $rootScope.$on('$stateChangeSuccess', emit);
 
-    var nrzNotification = function (message, timeout) {
+    var nrzLightify = function (message, timeout) {
       switch (message.type) {
         case 'info':
           message.text = '<strong>Info:</strong>&nbsp;' + message.text;
@@ -45,7 +45,7 @@
           break;
       }
 
-      nrzNotification.nrzNotificationContainer.notify({
+      nrzLightify.nrzLightifyContainer.notify({
         message: { html: '<span>' + message.text + '</span>', text: false },
         type: message.type,
         fadeOut: message.fadeOut
@@ -53,26 +53,26 @@
     };
 
     // The container variable initializes.
-    nrzNotification.nrzNotificationContainer = {};
+    nrzLightify.nrzLightifyContainer = {};
 
     // The flash stack updater method.
-    nrzNotification.flash = function (message, timeout) {
+    nrzLightify.flash = function (message, timeout) {
       messages.push({ message: message, timeout: timeout });
     };
 
-    return nrzNotification;
+    return nrzLightify;
   }])
 
-  .directive('nrzFlashMessages', function (nrzNotification) {
+  .directive('nrzLightifyMessages', function (nrzLightify) {
     return {
       restrict: 'EA',
       replace: true,
       scope: false,
       controller: function ($scope, $rootScope) {
-        $rootScope.$on('flash:message', function (_, messages, nrzNotification, done) {
+        $rootScope.$on('flash:message', function (_, messages, nrzLightify, done) {
           // Uses all stacked messages for showing the notification bands.
           angular.forEach(messages, function (message, index) {
-            nrzNotification(message.message, message.timeout);
+            nrzLightify(message.message, message.timeout);
           });
 
           done();
@@ -83,7 +83,7 @@
         element.addClass('notifications').addClass(attrs.position);
 
         // Keeping the element to be using within the methods of the factory.
-        nrzNotification.nrzNotificationContainer = element;
+        nrzLightify.nrzLightifyContainer = element;
       }
     };
   });

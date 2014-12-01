@@ -1,0 +1,17 @@
+.nrz-layer {
+    padding: 15px 15px 15px;
+}
+
+/* bootstrap-notify.css */
+.notifications {
+    filter: alpha(opacity=0.95);
+    opacity: 0.95;
+}
+
+.notifications > div > span {
+    margin-right: 15px;
+}
+
+.notifications > div > a.close {
+    margin-top: -2px;
+}

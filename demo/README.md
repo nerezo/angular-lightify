@@ -11,7 +11,7 @@ You have to install npm development dependencies first:
 After that install bower dependencies of the demo application:
 
 ```
-~/Projects/angular-lightify/demo$]$ npm install
+~/Projects/angular-lightify/demo$]$ bower install
 ...
 ```
 

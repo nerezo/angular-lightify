@@ -1,10 +1,12 @@
 angular-lightify
 ==============
 
-AngularJS factory for Bootstrap notify
+A lightweight AngularJS factory for Bootstrap notify
 
 Dependencies
 ==============
+
+_You can find all required libraries in the bower.json configuration file under the demo directory_
 
 AngularJS
 

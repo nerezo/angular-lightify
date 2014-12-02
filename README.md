@@ -27,7 +27,7 @@ Usage
 ==============
 
 ```
-<script src="./angular-lightify.js"></script>
+<script src="angular-lightify.js"></script>
 ```
 
 Create for example a div element with attribute or a nrz-flash-messages element in the body.

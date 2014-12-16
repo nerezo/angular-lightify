@@ -1,3 +1,12 @@
+
+/**
+* Yet another simple and lightweight notification factory for Angularjs which depends to 
+* the bootstrap-notify (https://github.com/nerezo/angular-lightify).
+* 
+* @versionv1.0 - 2014-12-02 * @link https://github.com/nerezo/angular-lightify
+* @author Okan Özeren <okanozeren[at]gmail.com>
+* @license MIT License, http://www.opensource.org/licenses/MIT
+*/
   angular.module('nrzLightify', [])
 
   .factory('nrzLightify', ['$rootScope', '$timeout', function ($rootScope, $timeout) {

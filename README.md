@@ -33,7 +33,7 @@ Usage
 Create for example a div element with attribute or a nrz-flash-messages element in the body.
 
 ```
-<div nrz-flash-messages position="top-right"></div>
+<div nrz-lightify-messages position="top-right"></div>
 ```
 
 Avaliable positions:

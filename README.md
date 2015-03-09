@@ -81,9 +81,8 @@ nrzLightify({
 
 Demo
 ==============
-<p data-height="515" data-theme-id="10341" data-slug-hash="ByNmEP" data-default-tab="result" data-user="nerezo" class='codepen'>See the Pen <a href='http://codepen.io/nerezo/pen/ByNmEP/'>Angular-Lightify-Demo</a> by <a href='http://codepen.io/nerezo'>@nerezo</a> on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="522" data-theme-id="10341" data-slug-hash="QwVrRX" data-default-tab="result" data-user="nerezo" class='codepen'>See the Pen <a href='http://codepen.io/nerezo/pen/QwVrRX/'>Angular-Lightify-Demo</a> by <a href='http://codepen.io/nerezo'>@nerezo</a> on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
 
 # License
 
